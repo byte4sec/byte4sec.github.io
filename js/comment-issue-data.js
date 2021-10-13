@@ -178,10 +178,8 @@ function renderCommentData(COMMENT_ARR) {
             var item = COMMENT_ARR[i];
             var contentStr = item.content;
             htmlContentWidget +=
-                "<div class='card-comment-item'>" + 
-                    "<a href=\"" + item.userUrl + "\"target=\"_blank\">" + 
-                        "<img class='ava' src='" + item.userAvatar + "'  onerror='this.onerror = null;this.src=\"https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg\";' /></a>" +
-                    "<div class='item-header-text'><a href='" + item.userUrl + "' target='_blank'>" + item.userName + "</a>&nbsp;发表于" + getDateDiff(new Date(item.date).getTime()) + "</div>" + "<div class=\"item-text\"><a href =\"" + item.url + '#comment-container\">' + contentStr + "</a></div>" +
+                "<div class='card-comment-item'>" + "<a href=\"" + item.userUrl + "\"target=\"_blank\">" + "<img class='ava' src='" + item.userAvatar + "'/></a>" +
+                "<div class='item-header-text'><a href='" + item.userUrl + "' target='_blank'>" + item.userName + "</a>&nbsp;发表于" + getDateDiff(new Date(item.date).getTime()) + "</div>" + "<div class=\"item-text\"><a href =\"" + item.url + '#comment-container\">' + contentStr + "</a></div>" +
                 "</div>";
         }
         htmlContentWidget += "</div>"
@@ -334,7 +332,7 @@ function loadIssueData(appId, appKey, userName, userRepo, isValine) {
             }
         }
         // console.clear();
-        //console.log("~~~~欢迎光临！记得有时间多来看看哦，https://removeif.github.io/ ~~~~")
+        console.log("~~~~欢迎光临！记得有时间多来看看哦，https://removeif.github.io/ ~~~~")
     }
         ,
         500
